@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Open Drawer Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Urbanist">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Urbanist", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+
+<style>
+.w3-sidebar-custom-color {color:#18271D !important;background-color:#cdbcdc !important}
+.w3-custom-green {color:#18271D !important}
+</style>
+</head>
+<body style="background-color: #F3F6EB;">
+
+<!-- Side bar background purple color: #cdbcdc -->
+<!-- Side bar background purple color: #18271D -->
+<!-- Text color: #18271D -->
+<!-- White: #F3F6EB -->
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-sidebar-custom-color w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <img src="./logo.png" style="width:100%;height:100%;">
+    <!-- <h3 class="w3-padding-64"><b>open drawer</b></h3> -->
+  </div>
+  <br>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a>
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About me</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>open drawer</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Ninguém solta a mão de ninguém.</b></h1>
+    <h1 class="w3-xxxlarge w3-custom-green"><b>Hello, welcome.</b></h1>
+    <hr style="border-color: #18271D;width:50px;border:5px solid" class="w3-round">
+    <p>I'm passionate about organizing spaces and believe that a well-organized space can transform people's lives.</p>
+    <p>My goal is to help you create functional, practical, and aesthetically pleasing environments, so you can enjoy an organized home or office. Here, you will find tips,
+      guidance, and inspirations to organize every corner, from the kitchen to workspaces. Join me on this journey to transform chaos into harmony and create spaces that make you feel welcome and serene.
+      Together, let's bring order to your world.
+    </p>
+  </div>
+
+<!-- TODO: Add images when showcase is ready -->
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="./image1.jpeg" style="width:100%" onclick="onClick(this)" alt="From this">
+      <!-- <img src="./image2.jpeg" style="width:100%" onclick="onClick(this)" alt="To this"> -->
+      <!-- <img src="./image3.jpeg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs"> -->
+    </div>
+
+    <div class="w3-half">
+      <img src="./image2.jpeg" style="width:100%" onclick="onClick(this)" alt="To this">
+      <!-- <img src="/w3images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+      <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design"> -->
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:50px">
+    <h1 class="w3-xxxlarge w3-custom-green"><b>Services.</b></h1>
+    <hr style="width:50px;border:5px solid" class="w3-round">
+    <h3><b>Residential Organization:</b></h3>
+    <p>Do you dream of a home where every object has its place, and you can easily find everything? I'm here to help you! With practical tips and personalized guidance, I will assist you in transforming your home into an organized and harmonious space. From organizing cabinets and closets to managing space overall, you will find the best tips here to bring order to your home.</p>
+    <br>
+    <h3><b>Vacation Home Organization:</b></h3>
+    <p>
+A vacation home is a special retreat, a place to relax and enjoy leisure time. However, sometimes, clutter can disturb the peace you seek. With my expertise in organization, I will assist you in creating a perfectly organized vacation home where you can enjoy moments of relaxation worry-free. I will share techniques and tricks to maximize space, organize common areas, and ensure everything is ready for your perfect vacation.</p>
+
+  </div>
+
+  <!-- About me -->
+  <div class="w3-container" id="designers" style="margin-top:50px">
+    <h1 class="w3-xxxlarge w3-custom-green"><b>About me.</b></h1>
+    <hr style="width:50px;border:5px solid" class="w3-round">
+    <p>Hello! I'm a passionate Brazilian living in the US, with a background in the fashion industry. My true passion, however, is being a Personal Organizer. With a keen eye for detail and a love for color and symmetry, I find organizing therapeutic.
+
+Transforming spaces into harmonious sanctuaries brings me immense joy. Whether it's organizing spaces, perfecting closets, or planning events stylishly and practically, I'm here to help. Let's work together to bring more order, joy, and well-being into your life!</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="./cathi.png" alt="Cathi" style="width:100%">
+        <div class="w3-container">
+          <h3>Cathiane Bess Yanez</h3>
+          <p class="w3-opacity">Founder</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+  <!-- <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Get your quote now.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
+  </div> -->
+
+  <!-- <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+        <li class="w3-padding-16">Floorplanning</li>
+        <li class="w3-padding-16">10 hours support</li>
+        <li class="w3-padding-16">Photography</li>
+        <li class="w3-padding-16">20% furniture discount</li>
+        <li class="w3-padding-16">Good deals</li>
+        <li class="w3-padding-16">
+          <h2>$ 199</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-red w3-xlarge w3-padding-32">Pro</li>
+        <li class="w3-padding-16">Floorplanning</li>
+        <li class="w3-padding-16">50 hours support</li>
+        <li class="w3-padding-16">Photography</li>
+        <li class="w3-padding-16">50% furniture discount</li>
+        <li class="w3-padding-16">GREAT deals</li>
+        <li class="w3-padding-16">
+          <h2>$ 249</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  </div> -->
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:50px">
+    <h1 class="w3-xxxlarge w3-custom-green"><b>Get in contact.</b></h1>
+    <hr style="width:50px;border:5px solid" class="w3-round">
+    <p>
+We recognize that every client is unique, with specific organization needs. Therefore, we don't offer fixed prices on our website. Each project is personalized to meet your distinct requirements.
+
+For a customized quote, please contact us with details about your space and needs. Fill out the form. We're here to help you create an organized and harmonious environment tailored just for you. Thank you for considering our services!</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-black w3-margin-bottom">Send Message</button>
+    </form>
+  </div>
+
+  <div class="w3-container" id="contact" style="margin-top:20px">
+    <p>Alternativelly you can reach out over: <a href="https://www.instagram.com/open.drawer/">Instagram</a> </p>
+    <p>Or give me a call, send a message or WhatsApp on the number: <a href="tel:+17472449204">+1 (747) 244-9204</a> </p>
+  </div>
+
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <br>
+  </div>
+
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div/>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
